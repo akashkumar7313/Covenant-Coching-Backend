@@ -347,6 +347,12 @@ export default function Navbar() {
             >
               CONTACT US
             </NavLink>
+            <NavLink
+              to="/webadmin"
+              className="text-sm font-semibold leading-6  hover:text-blue-500 text-gray-900"
+            >
+              ADMIN
+            </NavLink>
           </Popover.Group>
         </nav>
       </header>

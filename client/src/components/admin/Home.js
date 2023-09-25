@@ -1,52 +1,25 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import QueryDetail from "./QueryDetail";
+import { firebase } from "../db/firebase"; 
 
 function Home() {
   const [loading, setLoading] = useState(false);
-  const [logoutLoading, setLogoutloading] = useState(false);
+  const [logoutLoading, setLogoutLoading] = useState(false); // Fix the typo here
   const [userData, setUserData] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    getUser();
-  }, []);
-
-  async function getUser() {
-    setLoading(true);
-    try {
-      setLoading(false);
-      const response = await axios({
-        method: "get",
-        url: "http://localhost:8081/api/auth/user",
-        withCredentials: true,
-      });
-
-      if (response.data.success) {
-        setUserData(response.data.data);
-      }
-      setLoading(false);
-    } catch (error) {
-      navigate("/webadmin");
-      setLoading(false);
-    }
-  }
-
   async function handleLogout() {
-    setLogoutloading(true);
+    setLogoutLoading(true);
     try {
-      const response = await axios({
-        method: "get",
-        url: "http://localhost:8081/api/auth/logout",
-        withCredentials: true,
-      });
-      if (response.data.success) {
-        navigate("/webadmin");
-      }
-      setLogoutloading(false);
+      await firebase.auth().signOut(); // Use Firebase Auth signOut method
+
+      // Redirect to the login page after successful logout
+      navigate("/");
     } catch (error) {
-      setLogoutloading(false);
+      console.error("Error during logout:", error);
+    } finally {
+      setLogoutLoading(false);
     }
   }
 

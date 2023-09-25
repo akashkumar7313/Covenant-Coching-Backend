@@ -7,31 +7,34 @@ import { Breadcrumbs } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 import Footer from "../../Footer";
 import { useState } from "react";
-import axios from "axios";
 import Navbar from "../../Navbar";
+import { firebase } from "../../db/firebase";
 
 export default function Contact() {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [mobileNo, setMobileNo] = useState();
-  const [courseToApply, setCourseToApply] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobileNo, setMobileNo] = useState("");
+  const [courseToApply, setCourseToApply] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Check if the mobile number is not less than 10 digits or not up to 10 digits
     if (mobileNo.length !== 10) {
       alert("Mobile number should be 10 digits");
+      setIsLoading(false);
       return;
     }
 
     const data = { name, email, mobileNo, courseToApply };
 
-    axios
-      .post("http://localhost:8081/create/new/QueryForm", data)
-      .then((result) => {
+    // Reference to the Firebase Realtime Database
+    const db = firebase.database().ref("contactFormData");
+
+    // Push data to the database
+    db.push(data)
+      .then(() => {
         alert("Form submitted successfully!");
         setName("");
         setEmail("");
@@ -39,15 +42,15 @@ export default function Contact() {
         setCourseToApply("");
         setIsLoading(false);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.error("Error submitting form:", error);
         setIsLoading(false);
       });
   };
 
   return (
-    <div className="bg-green-200 ">
-    <Navbar/>
+    <div className="bg-green-200">
+      <Navbar />
       <div className="container mb-24 pt-28 mx-auto md:px-6">
         <section className="">
           <Breadcrumbs className="flex justify-end px-20">
@@ -110,7 +113,7 @@ export default function Contact() {
                       <BsPinMap />
                       <span className="text-black">Address:</span>A-1, First
                       Floor, Sameera Plaza Building, Naza Market, <br />{" "}
-                      Hazratganj, Lucknow
+                      Hazratganj, Lucknow
                     </li>
                   </ul>
                   {/* :MAP CONTAINER */}
@@ -119,7 +122,7 @@ export default function Contact() {
                       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d113911.09703999321!2d80.941699!3d26.8488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfda7eb1f4349%3A0xddb24865b7386109!2sThe%20Covenant%20Services!5e0!3m2!1sen!2sin!4v1694754057265!5m2!1sen!2sin"
                       title="map"
                       scrolling="no"
-                      frameborder="0"
+                      frameBorder="0"
                       width="100%"
                       height="300px"
                       className=""
@@ -203,7 +206,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       className="bg-cyan-800 py-2 px-16 mx-8 sm:mx-36 md:mx-36 lg:mx-40 mt-14 text-[20px] text-white rounded-md shadow-xl"
-                      disabled={isLoading} // Disable the button while loading
+                      disabled={isLoading}
                     >
                       {isLoading ? "Loading..." : "Submit"}
                     </button>
