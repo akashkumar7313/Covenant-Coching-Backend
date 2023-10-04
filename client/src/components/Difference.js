@@ -16,7 +16,7 @@ export default function Difference() {
                 />
               </div>
             </div>
-            <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
+            <div className="w-full shrink-0  grow-0 basis-auto lg:pr-12 lg:w-7/12">
               <div className="flex h-full items-center rounded-lg bg-primary p-6 text-center bg-blue-600 text-white lg:pl-12 lg:text-left">
                 <div className="lg:pl-12">
                   <h2 className="mb-6 text-3xl font-bold">
@@ -27,7 +27,7 @@ export default function Difference() {
                     simply learn a language. They want to connect with people
                     across the world, compete in a global marketplace, or simply
                     navigate the local bazaar on their own. That’s why all of
-                    our classNamees are focused on teaching you to truly engage
+                    our class Teacher are focused on teaching you to truly engage
                     with the language in a way that will give you confidence to
                     use it outside the classNameroom.
                   </p>
