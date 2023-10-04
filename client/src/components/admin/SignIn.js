@@ -32,17 +32,8 @@ function SignIn() {
   }
 
   return (
-    <div className="">
-       <div className=" absolute h-screen w-full">
-      <div className="absolute bg-black bg-opacity-90 w-full h-full"></div>
-      <img
-        src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-        alt="images"
-        className="w-full h-full object-cover"
-      />
-      </div>
-      <div className="flex justify-center pt-36">
-      <div className=" relative w-[380px] bg-blue-50 bg-opacity-50 border-b-4 border rounded-lg shadow sm:p-6 md:p-8 border-rose-600 dark:bg-gray-800 dark:border-gray-700">
+    <div className="grid justify-around items-center mt-[120px]">
+      <div className="w-[380px] max-w-sm p-4 bg-white border-b-4 border rounded-lg shadow sm:p-6 md:p-8 border-rose-600 dark:bg-gray-800 dark:border-gray-700 m-4">
         <div className="flex justify-center mb-5">
           <img src={image} alt="" className="h-20 w-30" />
         </div>
@@ -125,7 +116,6 @@ function SignIn() {
             </div>
           </form>
         </div>
-      </div>
       </div>
     </div>
   );
