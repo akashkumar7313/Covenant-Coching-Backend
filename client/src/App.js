@@ -20,6 +20,9 @@ import OurDirectors from "./components/Pages/AboutUs/OurDirectors";
 import SignIn from "./components/admin/SignIn";
 import Home from "./components/admin/Home";
 import PageNotFound from "./components/PageNotFound";
+import QueryDetail from "./components/admin/QueryDetail";
+import StudentsOffer from "./components/admin/StudentsOffer";
+import StudentsOffers from "./components/StudentsOffers";
 
 function App() {
   return (
@@ -36,6 +39,8 @@ function App() {
         <Route path="/Courses/IELTS" element={<IELTS />} />
         <Route path="/webadmin" element={<SignIn />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/Students/QueryDetail" element={<QueryDetail />} />
+        <Route path="/Students/Offer" element={<StudentsOffer />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Banner />} />
@@ -43,6 +48,7 @@ function App() {
           <Route path="elementary" element={<Elementary />} />
           <Route path="student" element={<Student />} />
           <Route path="offer" element={<Offer />} />
+          <Route path="StudentsOffers" element={<StudentsOffers />} />
           <Route path="difference" element={<Difference />} />
           <Route path="certifications" element={<Certifications />} />
           <Route path="footer" element={<Footer />} />
@@ -61,6 +67,7 @@ function Layout() {
       <Elementary />
       <Student />
       <Offer />
+      <StudentsOffers/>
       <Difference />
       <Certifications />
       <Footer />
