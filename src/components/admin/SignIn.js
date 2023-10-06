@@ -3,9 +3,9 @@ import { useState } from "react";
 import image from '../assets/llllllll.PNG'
 import { auth } from "../db/firebase";
 
+
 function SignIn() {
   const navigate = useNavigate();
-
   const [loading, setLoading] = useState(false);
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
@@ -20,12 +20,12 @@ function SignIn() {
       );
 
       // Add a console log to check if the login is successful
-      alert("Successfully login...", auth.currentUser);
+      alert("Successfully logged in...");
 
-      navigate("/Home"); // Navigate to the Home.js component after successful login
+      // Navigate to the /Home route without a full page reload
+      navigate("/Home");
     } catch (error) {
-      alert("Error during the login", error);
-      alert(error.message);
+      alert("Error during the login: " + error.message);
     }
 
     setLoading(false);

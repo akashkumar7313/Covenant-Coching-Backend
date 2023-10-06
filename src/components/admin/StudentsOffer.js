@@ -55,7 +55,7 @@ const StudentsOffer = () => {
             .then(() => {
               // Image deleted from Storage, now remove its data from the Database
               firebase.database().ref(`images/${imageId}`).remove();
-              console.log("Image deleted successfully");
+              alert("Image deleted successfully");
             })
             .catch((error) => {
               console.error("Error deleting image from Firebase Storage:", error);

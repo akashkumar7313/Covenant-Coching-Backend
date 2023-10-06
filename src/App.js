@@ -23,6 +23,7 @@ import PageNotFound from "./components/PageNotFound";
 import QueryDetail from "./components/admin/QueryDetail";
 import StudentsOffer from "./components/admin/StudentsOffer";
 import StudentsOffers from "./components/StudentsOffers";
+import OurDirectorsImages from "./components/admin/OurDirectorsImages";
 
 function App() {
   return (
@@ -38,9 +39,10 @@ function App() {
         <Route path="/Courses/Urdu/Course" element={<UrduCourse />} />
         <Route path="/Courses/IELTS" element={<IELTS />} />
         <Route path="/webadmin" element={<SignIn />} />
-        <Route path="/Home" element={<Home />} />
         <Route path="/Students/QueryDetail" element={<QueryDetail />} />
         <Route path="/Students/Offer" element={<StudentsOffer />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/OurDirectors/Images" element={<OurDirectorsImages />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Banner />} />

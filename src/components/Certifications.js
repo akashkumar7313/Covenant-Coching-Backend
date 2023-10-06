@@ -13,43 +13,43 @@ export default function Certifications() {
         <section className=" text-gray-800">
           <h2 className="text-4xl font-bold mb-6 text-center">Certifications</h2>
           <h2 className="text-2xl font-bold mb-14 text-center">Our staff aren’t just qualified, they’ve got the awards and certifications to prove it.</h2>
-          <div className="grid lg:grid-cols-6 gap-6">
-            <div className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg">
+          <div className="grid lg:grid-cols-6 gap-6 ">
+            <div className="relative overflow-hidden bg-no-repeat border border-green-600 bg-cover shadow-lg rounded-lg">
               <img
                 src={image1}
                 className="w-full"
                 alt="image1"
               />
             </div>
-            <div className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg">
+            <div className="relative overflow-hidden bg-no-repeat bg-cover border border-pink-600 shadow-lg rounded-lg">
               <img
                 src={image6}
                 className="w-full"
                 alt="image2"
               />
             </div>
-            <div className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg">
+            <div className="relative overflow-hidden bg-no-repeat bg-cover border border-cyan-600 shadow-lg rounded-lg">
               <img
                 src={image2}
                 className="w-full"
                 alt="image2"
               />
             </div>
-            <div className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg">
+            <div className="relative overflow-hidden bg-no-repeat bg-cover border border-blue-700 shadow-lg rounded-lg">
               <img
                 src={image3}
                 className="w-full"
                 alt="image1"
               />
             </div>
-            <div className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg">
+            <div className="relative overflow-hidden bg-no-repeat bg-cover border border-yellow-400 shadow-lg rounded-lg">
               <img
                 src={image4}
                 className="w-full"
                 alt="image1"
               />
             </div>
-            <div className="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg">
+            <div className="relative overflow-hidden bg-no-repeat bg-cover border border-black shadow-lg rounded-lg">
               <img
                 src={image5}
                 className="w-full"

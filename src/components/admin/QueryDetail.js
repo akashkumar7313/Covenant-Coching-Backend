@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { firebase } from "../db/firebase";
-import { AiFillEdit, AiOutlineCheck, AiOutlineClose, } from "react-icons/ai";
-import Home from "./Home";
 import { Breadcrumbs } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 
@@ -34,47 +32,8 @@ const QueryDetail = () => {
     fetchDataFromFirebase();
   }, [fetchDataFromFirebase]);
 
-  const handleEdit = (index) => {
-    setEditIndex(index);
-    setEditedData({ ...data[index] });
-  };
 
-  const handleUpdate = async (index) => {
-    try {
-      const updatedData = { ...data[index], ...editedData };
-      const queryFormRef = firebase.database().ref(`contactFormData/${data[index].id}`);
-  
-      await queryFormRef.update(updatedData);
-  
-      // Update the state data with the updatedData
-      const updatedDataArray = [...data];
-      updatedDataArray[index] = updatedData;
-      setData(updatedDataArray);
-  
-      setEditIndex(-1);
-      setError(null);
-    } catch (error) {
-      setError('Error updating data: ' + error.message);
-    }
-  };
-
-  const handleDelete = async (idToDelete) => {
-    try {
-      const queryFormRef = firebase.database().ref(`contactFormData/${idToDelete}`);
-  
-      await queryFormRef.remove();
-  
-      // Update the state data by removing the deleted item
-      const updatedDataArray = data.filter((item) => item.id !== idToDelete);
-      setData(updatedDataArray);
-  
-      setError(null);
-    } catch (error) {
-      setError('Error deleting data: ' + error.message);
-    }
-  };
-
-  return (
+  return ( 
     <div className="bg-blue-500">
     <Breadcrumbs className="flex justify-end px-4 text-white static top-5">
             <NavLink
@@ -117,9 +76,6 @@ const QueryDetail = () => {
                     </th>
                     <th className=" align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-blue-500 text-white border-cyan-500">
                       Applied Course
-                    </th>
-                    <th className=" px-10 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-blue-500 text-white border-cyan-500">
-                      Action
                     </th>
                   </tr>
                 </thead>
@@ -174,32 +130,6 @@ const QueryDetail = () => {
                         ) : (
                           contactFormData.courseToApply
                         )}
-                      </td>
-                      <td>
-                        {editIndex === index ? (
-                          <button
-                            className="text-white bg-black hover:bg-emerald-500 hover:text-white active:bg-emerald-600 uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                          type="button"
-                            onClick={() => handleUpdate(index)}
-                          >
-                            <AiOutlineCheck/> save
-                          </button>
-                        ) : (
-                          <button
-                            className="text-white bg-green-500 hover:bg-emerald-800 hover:text-white active:bg-emerald-600 uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                          type="button"
-                            onClick={() => handleEdit(index)}
-                          >
-                            <AiFillEdit/> edit
-                          </button>
-                        )}
-                        <button
-                           className="text-white bg-red-500 hover:bg-red-800 hover:text-white active:bg-emerald-600 uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                          type="button"
-                          onClick={() => handleDelete(contactFormData.id)}
-                        >
-                          <AiOutlineClose/> delete
-                        </button>
                       </td>
                     </tr>
                   ))}
