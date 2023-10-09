@@ -15,7 +15,7 @@ const Elementary = () => {
                     <div className='mx-2 md:mx-6 mt-10 mb-4'>
                         <h1 className='text-[28px] font-bold text-center'>Strong Foundation</h1>
                         <div className='text-gray-600 text-[14px] mt-3 text-center'>
-                            <p className='flex gap-[2px] text-xl'> Founded in 2005 by a team of directors with over 50 years experience, Heritage is built to last and grow into a bright future.​</p>
+                            <p className='flex gap-[2px] text-xl'> With students representing more than ten countries walking through our doors everyday.​</p>
                         </div>
                     </div>
                 </div>
