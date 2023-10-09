@@ -5,7 +5,7 @@ export class Offer extends Component {
   render() {
     return (
       <div>
-        <div className="container mx-auto md:px-6">
+        <div className="container mx-auto pt-16 md:px-6">
           <section className="">
             <div className="relative overflow-hidden bg-cover rounded-lg bg-no-repeat bg-[50%] bg-[url('https://i0.wp.com/lpatucson.org/central/wp-content/uploads/sites/3/2019/07/iStock-971404756.jpg?fit=1254%2C836&ssl=1')] h-[500px]"></div>
             <div className="container mx-auto px-6 md:px-12 xl:px-32">

@@ -41,7 +41,7 @@ export default function OurMethod() {
                       <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div class="px-6 md:px-12">
                         <div className="text-4xl font-bold pt-5 lg:pt-0">IRWIN AMIT DAS</div>
-                          <p className="text-[18px] font-bold mt-2s">Founder & Director <br/>Covenant Education Foreign Languages Languages</p>
+                          <p className="text-[18px] font-bold mt-2">Founder & Director <br/>Covenant Education</p>
                           <p class="mb-6 mt-6 text-neutral-600 dark:text-neutral-300">
                           At Covenant Education we believe we are in the business of teaching students, not just languages. That means that whether you are looking for an introduction to Hindi, intermediate Spanish, or advanced English, we’ll start wherever your language skills are and get to work moving you along the fluency continuum.
                           </p>

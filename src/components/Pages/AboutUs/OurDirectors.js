@@ -54,10 +54,8 @@ export default function OurDirectors() {
                 <div>
                   <div className="text-5xl font-bold pt-5 lg:pt-0">Our Directors</div>
                   <p className="text-[18px] mt-10  text-neutral-500">
-                    Covenant Education of Languages was founded in 2005 by Hugo  <br />
-                    and Lessandra Alves. Together, their years of language learning  <br />
-                    and teaching experience have helped propel a small Spanish-only <br />
-                    school into 2 locations offering 7 language options today.
+                  Covenant Education was founded in 2019 by Mr. Irwin Amit Das. <br /> Collectively, Covenant Education Director Mr. Irwin Amit Das  <br />have earned  British Council, PTE, TOEFL certifications. Their dreams <br />
+                   is for covenant education to serve as a bridge that connects  <br /> India and the world.
                   </p>
                   <p className="text-[18px] mt-4  text-neutral-500">
                     Collectively, Covenant Education’s directors have earned 2 CELTAs, <br />

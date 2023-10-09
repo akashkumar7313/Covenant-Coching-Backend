@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Elementary from "./components/Elementary";
-import Student from "./components/Student";
 import Offer from "./components/Offer";
 import Difference from "./components/Difference";
 import Certifications from "./components/Certifications";
@@ -48,7 +47,6 @@ function App() {
           <Route index element={<Banner />} />
           <Route path="testimonial" element={<Testimonial />} />
           <Route path="elementary" element={<Elementary />} />
-          <Route path="student" element={<Student />} />
           <Route path="offer" element={<Offer />} />
           <Route path="StudentsOffers" element={<StudentsOffers />} />
           <Route path="difference" element={<Difference />} />
@@ -67,7 +65,6 @@ function Layout() {
       <Banner />
       <Testimonial />
       <Elementary />
-      <Student />
       <Offer />
       <StudentsOffers/>
       <Difference />

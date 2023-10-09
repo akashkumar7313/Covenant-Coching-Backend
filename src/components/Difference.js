@@ -29,7 +29,7 @@ export default function Difference() {
                     navigate the local bazaar on their own. That’s why all of
                     our class Teacher are focused on teaching you to truly engage
                     with the language in a way that will give you confidence to
-                    use it outside the classNameroom.
+                    use it outside the classroom.
                   </p>
                   <h2 className="mb-6 text-3xl font-bold">Our Mission</h2>
                   <p className="mb-6 pb-2 text-[18px] lg:pb-0">

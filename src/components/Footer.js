@@ -108,9 +108,7 @@ export default function Footer() {
                   Covenant Education Hazratganj, Lucknow
                 </h6>
                 <p className="mx-8">
-                  To speak with someone about beginning classes with Heritage,
-                  use the contact form provided or find the contact details for
-                  your preferred location below.
+                To speak with someone about beginning classes with covenant use the contact form provided or find the contact details below.
                 </p>
               </div> 
               <div className="lg:mx-24">
