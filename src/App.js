@@ -23,6 +23,8 @@ import QueryDetail from "./components/admin/QueryDetail";
 import StudentsOffer from "./components/admin/StudentsOffer";
 import StudentsOffers from "./components/StudentsOffers";
 import OurDirectorsImages from "./components/admin/OurDirectorsImages";
+import Accommodations from "./components/Pages/InternationalStudent/Accommodations";
+import InternationalStudentServices from "./components/Pages/InternationalStudent/InternationalStudentServices";
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
         <Route path="/Students/Offer" element={<StudentsOffer />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/OurDirectors/Images" element={<OurDirectorsImages />} />
+        <Route path="/InternationalStudents/Accommodations" element={<Accommodations />} />
+        <Route path="/InternationalStudents/InternationalStudentServices" element={<InternationalStudentServices />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Banner />} />

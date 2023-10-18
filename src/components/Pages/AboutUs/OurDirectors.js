@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, } from "react";
 import { Breadcrumbs } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 import Footer from "../../Footer";
@@ -53,30 +53,12 @@ export default function OurDirectors() {
               <div className="flex flex-wrap">
                 <div>
                   <div className="text-5xl font-bold pt-5 lg:pt-0">Our Directors</div>
-                  <p className="text-[18px] mt-10  text-neutral-500">
-                  Covenant Education was founded in 2019 by Mr. Irwin Amit Das. <br /> Collectively, Covenant Education Director Mr. Irwin Amit Das  <br />have earned  British Council, PTE, TOEFL certifications. Their dreams <br />
-                   is for covenant education to serve as a bridge that connects  <br /> India and the world.
-                  </p>
-                  <p className="text-[18px] mt-4  text-neutral-500">
-                    Collectively, Covenant Education’s directors have earned 2 CELTAs, <br />
-                    2 Masters Degrees, 1 DELE and 1 DELTA. They’ve reached fluency in <br />
-                    9 languages, and taught over 1,500 students from 36 countries <br /> combining
-                    their considerable expertise with years of experience  <br /> in learning
-                    environments around the world.
-                  </p>
-                  <p className="text-[18px] mt-4  text-neutral-500 ">
-                    Their dream is for Covenant Education to serve as a bridge
-                    that  <br /> connects India and the world by providing
-                    culturally relevant and  <br /> innovative language learning,
-                    equipping students to communicate  <br /> confidently and
-                    succeed in their individual goals.
-                  </p>
-                  <p className="text-[18px] mt-4  text-neutral-500">
-                    Click on any of our directors to learn more about their
-                    experience,  <br /> certifications, and awards.
+                  <p className="text-[20px] mt-10  text-neutral-500">
+                  Covenant Education was founded in 2019 by Mr. Irwin Amit Das. Collectively, Covenant Education <br /> Director Mr. Irwin Amit Das have earned  British Council, PTE, TOEFL certifications. <br /> His dreams
+                  is for covenant education to serve as a bridge that connects  <br /> India and the world.
                   </p>
                 </div>
-                <div class="mb-12 mx-12 md:px-3 lg:mb-0 lg:w-6/12">
+                <div class="mb-4 mx-12 md:px-3 lg:mb-0">
                   <div className=" flex flex-wrap justify-end gap-5 mt-10">
                       {imageData.map((image) => (
                         <div
